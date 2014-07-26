@@ -10,8 +10,17 @@
 
 BOT_NAME = 'dietfefe'
 
-SPIDER_MODULES = ['dietfefe.spiders']
+SPIDER_MODULES   = ['dietfefe.spiders']
 NEWSPIDER_MODULE = 'dietfefe.spiders'
 
+ITEM_PIPELINES = {
+        'dietfefe.pipelines.DuplicatesPipeline': 200,
+        'dietfefe.pipelines.JsonExportPipeline': 100,
+}
+
+FEED_EXPORTERS_BASE = {
+        'json': 'scrapy.contrib.exporter.JsonItemExporter',
+}
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-#USER_AGENT = 'dietfefe (+http://www.yourdomain.com)'
+USER_AGENT = 'scrapy'

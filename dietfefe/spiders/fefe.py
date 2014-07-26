@@ -14,5 +14,4 @@ class FefeSpider(scrapy.Spider):
         for link in response.xpath('//ul/li/a/@href'):
             item          = DietfefeItem()
             item['link']  = link.extract()
-            if not "?ts" in item['link']:
-                yield item
+            if not "?ts" in item['link']: yield item
