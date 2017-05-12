@@ -1,23 +1,37 @@
 ## dietfefe
 blog.fefe.de - refined
 
-- you need python 2.7+
-- do a `git clone` and change into the cloned directory
-- `pip install scrapy`
-- `scrapy crawl fefe`
-- `cd web/ ; python -m SimpleHTTPServer`
-- point browser to localhost:8000
+### why?
+One late summer night over cocktails, a few friends and myself arrived at
+the conclusion that, "fefe's blog" isn't worth looking at for anything else
+than the actual URLs -- mostly sent by other people anyway -- as the content 
+and comments are hugely annoying, often technically false and mostly contain
+[F.U.D](https://en.wikipedia.org/wiki/Fear,_uncertainty_and_doubt).
 
-alternatively you could set up a scrapyd server. it's fairly simple to
-do postprocessing and follow up analysis of parsed URLs with scrapy,
-that's why I've chosen it, nothing yet implemented though.
+
+Consequently, I wrote this in a few minutes on my way to bed - 'njoy!
+
+### how?
+1. `git clone https://github.com/azet/dietfefe.git`
+2. `cd dietfefe ; pip install scrapy`
+3. `scrapy crawl fefe`
+4. `cd web/ ; python -m SimpleHTTPServer`
+5. point browser to `http://localhost:8000` (see below to host on a webserver)
+
+alternatively you could set up `scrapyd` or a cronjob on any webserver.
+it's fairly simple to do postprocessing and follow up analysis of parsed
+URLs with scrapy, that's why I've chosen it, nothing yet implemented though.
+
+### screenshot / demo
+![screenshot](screenshot.png)
 
 ## License
 http://opensource.org/licenses/MIT
 
+```
 The MIT License (MIT)
 
-Copyright (c) 2014 Aaron Zauner <azet@azet.org>
+Copyright (c) 2014-2017 Aaron Zauner <azet@azet.org>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -36,3 +50,4 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
+```
